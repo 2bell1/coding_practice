@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 long long solution(int a, int b) {
-    long long answer = 0;
+   long long answer = 0;
     
     if (a == b)
         return a;
