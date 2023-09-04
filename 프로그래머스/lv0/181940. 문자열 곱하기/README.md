@@ -1,4 +1,4 @@
-# [unrated] 문자열 곱하기 - 181940 
+# [lv0] 문자열 곱하기 - 181940 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181940) 
 
