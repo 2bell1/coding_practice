@@ -1,2 +1,1 @@
-# coding_practice
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+| 2023-08-29 | 5문제 |<details><summary>...</summary>[]()<br/>[]()<br/>[]()<br/>[]()<br/>[]()</details>|<details><summary>...</summary>lv1<br/>lv1<br/>lv2<br/>lv2<br/>lv2</details>|<details><summary>...</summary>[프로그래머스]()<br/>[프로그래머스]()<br/>[프로그래머스]()<br/>[프로그래머스]()<br/>[프로그래머스]()</details>|
