@@ -33,4 +33,4 @@ jobs: # 실제 실행될 내용
       run: |
         git push 
       env:
-          GITHUB_TOKEN: ${{ secrets.AUTO_README }}
+          GITHUB_TOKEN: ${{ AUTO_README }}
