@@ -2,18 +2,10 @@ class Solution {
     public int solution(int left, int right) {
         int answer = 0;
         for (int i = left; i <= right; i++) {
-            int num = 0; // 약수 개수
-            for (int x = 1; x <= i; x++) {
-                if (i % x == 0) {
-                    num++;
-                }
-            }
-
-            if (num % 2 == 0) {
-                answer += i;
-            } else {
+            if( i % Math.sqrt(i) == 0)
                 answer -= i;
-            }
+            else
+                answer += i;
         }
         return answer;
     }
