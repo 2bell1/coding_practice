@@ -38,27 +38,20 @@ def main():
                 content += "## 📚 {}\n".format(directory)
             else:
                 content += "### 🚀 {}\n".format(directory)
-                content += "| 문제 | 링크 | 날짜 |\n"
-                content += "| ----- | ----- | ----- |\n"
+                content += "| 문제 | 링크 |\n"
+                content += "| ----- | ----- |\n"
             directories.append(directory)
 
         for file in files:
             if category not in solveds:
                 file_path = os.path.join(root, file)
-                commit_date = get_commit_date(file_path)  # 각 파일의 커밋 날짜 가져오기
-                content += "|{}|[링크]({})|{}|\n".format(category, parse.quote(file_path), commit_date)
+                content += "|{}|[링크]({})|{}|\n".format(category, parse.quote(file_path))
                 solveds.append(category)
 
     with open("README.md", "w") as fd:
         fd.write(content)
 
-def get_commit_date(file_path):
-    try:
-        result = os.popen('git log -1 --format=%cd -- ' + file_path).read()
-        commit_date = datetime.strptime(result.strip(), "%a %b %d %H:%M:%S %Y %z")
-        return commit_date.strftime("%Y-%m-%d %H:%M:%S")
-    except Exception as e:
-        return ""
+
 
 if __name__ == "__main__":
     main()
