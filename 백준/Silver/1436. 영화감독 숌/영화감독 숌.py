@@ -1,17 +1,13 @@
 num = int(input())
 Name = 666
 i = 0
+t = True
 while i<num:
-    check =0
-    for x in range(len(str(Name))):
-        if str(Name)[x] =="6":
-           check +=1
-        else:
-            check =0
-        
-        if check == 3:
-             break
-    if check == 3:
+    if "666" in str(Name):
+       t=True
+    else:
+        t=False
+    if t==True:
        i+=1
        Name += 1
     else:
