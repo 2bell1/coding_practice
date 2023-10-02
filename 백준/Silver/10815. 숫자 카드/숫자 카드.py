@@ -1,27 +1,16 @@
 import sys
 
-n = int(input())
-card = list(map(int, sys.stdin.readline().split()))
-m = int(input())
-check = list(map(int, sys.stdin.readline().split()))
+N = int(sys.stdin.readline())
+cards = list(map(int, sys.stdin.readline().split()))
+M = int(sys.stdin.readline())
+checks = list(map(int, sys.stdin.readline().split()))
 
-card.sort()
+_dict = {}  # 속도는 dictionary!
+for i in range(len(cards)):
+    _dict[cards[i]] = 0  # 아무 숫자로 mapping
 
-def binary_search(array, target, start, end):
-    while start <= end:
-        mid = (start + end) // 2
-
-        if array[mid] == target:
-            return mid
-        elif array[mid] > target:
-            end = mid - 1
-        else:
-            start = mid + 1
-    return None
-
-
-for i in range(m):
-    if binary_search(card, check[i], 0, n - 1) is not None:
-        print(1, end=' ')
-    else:
+for j in range(M):
+    if checks[j] not in _dict:
         print(0, end=' ')
+    else:
+        print(1, end=' ')
