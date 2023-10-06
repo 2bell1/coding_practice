@@ -1,0 +1,20 @@
+from collections import deque
+
+num = int(input())
+way=[0]*(num+1)
+d = deque()
+d.append(num)
+while d:
+    c=d.popleft()
+    if c==1:
+     break
+    if c % 3 ==0 and way[c//3]==0:
+       way[c//3] = way[c]+1
+       d.append(c//3)
+    if c%2==0 and way[c//2]==0:
+       way[c//2] = way[c]+1
+       d.append(c//2)
+    if way[c-1]==0:
+       way[c-1] = way[c]+1
+       d.append(c-1)
+print(way[1])
