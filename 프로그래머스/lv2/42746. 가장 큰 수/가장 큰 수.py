@@ -18,7 +18,6 @@ def custom_sort(x, y):
 def solution(numbers):
     answer = ''
     str_numbers = [str(x) for x in numbers]
-    str_numbers.sort(reverse=True)
     str_numbers.sort(reverse=True,key=(cmp_to_key(custom_sort)))
     
     for i in str_numbers:
