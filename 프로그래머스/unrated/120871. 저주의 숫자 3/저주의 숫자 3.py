@@ -1,10 +1,7 @@
 def solution(n):
     answer = 1
     i = 1
-    num = 13
-    if str(num) in "3":
-        print(111)
-    while 1:
+    while i<=n:
         
         if (answer  % 3 ==0) or ("3" in str(answer)):
             answer +=1
