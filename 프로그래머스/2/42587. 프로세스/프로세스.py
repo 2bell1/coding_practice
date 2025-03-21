@@ -1,18 +1,13 @@
 from collections import deque
 
 def solution(priorities, location):
-    answer = 0
-    dq = deque([[idx, pri] for idx, pri in enumerate(priorities)])
-    pr = sorted(priorities, reverse=True)
-    
-    while dq:
-        ans = dq.popleft()
-        if ans[1] == pr[0]:
-            if ans[0] == location:
-                return answer +1
-            answer+=1
-            pr.pop(0)
-        else:
-            dq.append(ans)
-    
-    return answer
+    prior = [[idx,i] for idx, i in enumerate(priorities)]
+    q = deque(prior)
+    cnt = 0
+    while q:
+        now = q.popleft()
+        if any(now[1] < queue[1] for queue in q): q.append(now)
+        else : 
+            if now[0] == location : return cnt + 1
+            cnt += 1
+    return -1
